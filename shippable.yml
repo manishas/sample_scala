@@ -4,6 +4,7 @@ scala:
     - 2.11.0
 
 script:
+  - printenv
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
 
